@@ -203,6 +203,7 @@ clear
       sleep 4
       clear
       exit
+      exit1
       ;;
     *)
       tput setaf 1 ; tput bold ; echo "OPÇÃO INVÁLIDA!!!" ; tput sgr0
