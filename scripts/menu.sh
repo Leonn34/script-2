@@ -64,7 +64,7 @@ fi
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
   # MENU
-  echo -e "\033[01;33m[1] \033[01;37mVERIFICAR ATUALIZAÇÕES\033[00;37m"
+  echo -e "\033[01;33m[1] \033[01;37mAPLICAR ATUALIZAÇÕES\033[00;37m"
   sleep 0.2
   echo -e "\033[01;33m[2] \033[01;37mCRIAR USUÁRIO SSH\033[00;37m"
   sleep 0.2
