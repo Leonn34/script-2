@@ -36,12 +36,14 @@
 
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
-chmod +x menu.sh
+chmod +x /bin/menu.sh
 
-if diff menu menu.sh ; then
+if diff menu menu.sh; then
   echo "não houve mudanças"
+  sleep 5
 else
   echo "houve mudanças, atualizando..."
+  sleep 5
   mv menu.sh menu
 fi
 
