@@ -42,26 +42,9 @@ clear
 cd /bin
 
 if diff menu menu.sh > /dev/null; then
-	#echo ""
-	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-  	#sleep 5
-  	#echo ""
-	#echo "ENTER para voltar"
-	#read -p " "
-	#sleep 1s
-	#menu
-	#exit1
+	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!
 else
   	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-  	#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-	#echo -e "\033[1;32m         _   _               _ _                    _                 \033[0m"
-	#echo -e "\033[1;32m        / \ | |_ _   _  __ _| (_)______ _ _ __   __| | ___            \033[0m" 
-	#echo -e "\033[1;32m       / _ \| __| | | |/ _  | | |_  / _  |  _ \ / _  |/ _ \           \033[0m" 
-	#echo -e "\033[1;32m      / ___ \ |_| |_| | (_| | | |/ / (_| | | | | (_| | (_) | _ _      \033[0m" 
-	#echo -e "\033[1;32m     /_/   \_\__|\__,_|\__,_|_|_/___\__,_|_| |_|\__,_|\___(_|_|_)     \033[0m"
-	#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-#att
-
 fi
 
 clear
