@@ -50,21 +50,21 @@ clear
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
   tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
-  # MENU
-  
-  if diff menu menu.sh > /dev/null; then
-	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-else
-  	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-exit
-fi
-  
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso
+#######VERIFICAÇÃO DE ATUALIZAÇÃO####################
+if diff menu menu.sh > /dev/null; then
+	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+else
+	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+exit
+fi
+#######FIM DE ATUALIZAÇÃO############################
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   tput setaf 6 ; tput bold ; echo "                                   USUÁRIOS ON:" $(ps x | grep hd | grep -v root | grep priv |wc -l) ; tput sgr0 
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
+  # MENU
   echo -e "\033[01;33m[1] \033[01;37mVERIFICAR ATUALIZAÇÕES\033[00;37m"
   sleep 0.2
   echo -e "\033[01;33m[2] \033[01;37mCRIAR USUÁRIO SSH\033[00;37m"
