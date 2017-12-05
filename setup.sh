@@ -51,7 +51,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Aguarde a configuraÃ§Ã
 sleep 3
 apt-get update -y > /dev/null
 apt-get upgrade -y > /dev/null
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup_script_sousatips.sh /bin/att 1>/dev/null 2>/dev/null
+rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att 1>/dev/null 2>/dev/null
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh 1>/dev/null 2>/dev/null
 
 apt-get install squid3 bc screen nano unzip dos2unix wget -y > /dev/null
@@ -64,52 +64,52 @@ if [ -f "/usr/sbin/ufw" ] ; then
 fi
 if [ -d "/etc/squid3/" ]
 then
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/squid2.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/payload.txt -O /etc/squid3/payload.txt
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/payload.txt -O /etc/squid3/payload.txt
 	echo " " >> /etc/squid3/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/menu.sh -O /bin/menu
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh -O /bin/menu
 	chmod +x /bin/menu
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/atualizar.sh -O /bin/atualizar
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/atualizar.sh -O /bin/atualizar
 	chmod +x /bin/atualizar
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/clearcache.sh -O /bin/clearcache
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/clearcache.sh -O /bin/clearcache
 	chmod +x /bin/clearcache
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/badudp.sh -O /bin/badudp
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/badudp.sh -O /bin/badudp
 	chmod +x /bin/badudp
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/userbkp.sh -O /bin/userbkp
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/userbkp.sh -O /bin/userbkp
 	chmod +x /bin/userbkp
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/socks.py -O /bin/socks.py
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/setup_script_sousatips.sh -O /bin/setup_script_sousatips.sh
-	chmod +x /bin/setup_script_sousatips.sh
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/att.sh -O /bin/att
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks.py -O /bin/socks.py
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/setup.sh
+	chmod +x /bin/setup.sh
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 	chmod +x /bin/att
 	
 	if [ ! -f "/etc/init.d/squid3" ]
@@ -127,52 +127,52 @@ then
 fi
 if [ -d "/etc/squid/" ]
 then
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/squid.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/squid.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/payload.txt -O /etc/squid/payload.txt
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/payload.txt -O /etc/squid/payload.txt
 	echo " " >> /etc/squid/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/2/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/2/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/2/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/2/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/menu.sh -O /bin/menu
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh -O /bin/menu
 	chmod +x /bin/menu
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/atualizar.sh -O /bin/atualizar
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/atualizar.sh -O /bin/atualizar
 	chmod +x /bin/atualizar
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/clearcache.sh -O /bin/clearcache
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/clearcache.sh -O /bin/clearcache
 	chmod +x /bin/clearcache
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/badudp.sh -O /bin/badudp
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/badudp.sh -O /bin/badudp
 	chmod +x /bin/badudp
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/userbkp.sh -O /bin/userbkp
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/userbkp.sh -O /bin/userbkp
 	chmod +x /bin/userbkp
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/socks.py -O /bin/socks.py
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/setup_script_sousatips.sh -O /bin/setup_script_sousatips.sh
-	chmod +x /bin/setup_script_sousatips.sh
-	wget https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/att.sh -O /bin/att
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks.py -O /bin/socks.py
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/setup.sh
+	chmod +x /bin/setup.sh
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 	chmod +x /bin/att
 	
 	if [ ! -f "/etc/init.d/squid" ]

@@ -31,7 +31,7 @@ sleep 4
 
 rm /bin/att
 
-wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/scripts/att.sh -O /bin/att
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 clear
 chmod +x /bin/att
 clear
