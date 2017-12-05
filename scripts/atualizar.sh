@@ -19,7 +19,7 @@ branco="\033[1;37m"
 
 clear
 rm /bin/menu.sh
-wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
 chmod +x /bin/menu.sh
 clear
 
