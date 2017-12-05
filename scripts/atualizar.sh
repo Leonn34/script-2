@@ -25,7 +25,7 @@ clear
 
 cd /bin
 
-if diff menu menu.sh; then
+if diff menu menu.sh > /dev/null; then
 	echo ""
 	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
   	sleep 5
