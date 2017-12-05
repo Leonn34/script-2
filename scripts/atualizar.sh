@@ -18,11 +18,6 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 clear
-
-
-
-sleep 4
-
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
 chmod +x /bin/menu.sh
@@ -31,7 +26,7 @@ clear
 cd /bin
 
 if diff menu menu.sh; then
-  echo "não houve mudanças"
+  echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
   sleep 5
 else
   	#echo "houve mudanças, atualizando..."
