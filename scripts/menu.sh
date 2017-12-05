@@ -32,8 +32,6 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 
-#INSERI VERIFICAÇÃO DE ARQUIVOS
-
 clear
   #TITULO
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0

@@ -26,8 +26,9 @@ clear
 cd /bin
 
 if diff menu menu.sh; then
-  echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-  sleep 5
+	echo ""
+	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+  	sleep 5
 else
   	#echo "houve mudanças, atualizando..."
   	echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
@@ -50,6 +51,7 @@ else
 
 fi
 clear
+exit
 menu
 
 
