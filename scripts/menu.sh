@@ -54,9 +54,9 @@ clear
   tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso ; tput sgr0
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
-	echo -e "\033[1;37m NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!\033[0;37m"
+echo -e "\033[1;37m NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!\033[0;37m"
 else
-	echo -e "\033[1;33m HÁ ATUALIZAÇÕES DISPONÍVEIS!\033[0;37"
+tput setaf 1 ; tput bold ; echo " HÁ ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
 fi
 #######FIM DE ATUALIZAÇÃO############################
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
