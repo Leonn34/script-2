@@ -29,6 +29,12 @@ if diff menu menu.sh; then
 	echo ""
 	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
   	sleep 5
+  	echo ""
+	echo "ENTER para voltar"
+	read -p " "
+	sleep 1s
+	menu
+	exit1
 else
   	#echo "houve mudanças, atualizando..."
   	echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
