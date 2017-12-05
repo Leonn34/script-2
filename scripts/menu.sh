@@ -32,6 +32,38 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 
+
+clear
+rm /bin/menu.sh
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
+chmod +x /bin/menu.sh
+clear
+
+cd /bin
+
+if diff menu menu.sh > /dev/null; then
+	#echo ""
+	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+  	#sleep 5
+  	#echo ""
+	#echo "ENTER para voltar"
+	#read -p " "
+	#sleep 1s
+	#menu
+	#exit1
+else
+  	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+  	#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
+	#echo -e "\033[1;32m         _   _               _ _                    _                 \033[0m"
+	#echo -e "\033[1;32m        / \ | |_ _   _  __ _| (_)______ _ _ __   __| | ___            \033[0m" 
+	#echo -e "\033[1;32m       / _ \| __| | | |/ _  | | |_  / _  |  _ \ / _  |/ _ \           \033[0m" 
+	#echo -e "\033[1;32m      / ___ \ |_| |_| | (_| | | |/ / (_| | | | | (_| | (_) | _ _      \033[0m" 
+	#echo -e "\033[1;32m     /_/   \_\__|\__,_|\__,_|_|_/___\__,_|_| |_|\__,_|\___(_|_|_)     \033[0m"
+	#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
+#att
+
+fi
+
 clear
   #TITULO
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
