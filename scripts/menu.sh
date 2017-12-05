@@ -57,7 +57,7 @@ if diff menu menu.sh > /dev/null; then
 	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
 else
 	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-exit
+#exit
 fi
 #######FIM DE ATUALIZAÇÃO############################
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
