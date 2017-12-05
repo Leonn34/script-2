@@ -42,7 +42,7 @@ clear
 cd /bin
 
 if diff menu menu.sh > /dev/null; then
-	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!
+	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
 else
   	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
 fi
