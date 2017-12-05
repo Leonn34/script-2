@@ -32,6 +32,19 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 
+#INSERI VERIFICAÇÃO DE ARQUIVOS
+
+rm /bin/menu.sh
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
+chmod +x menu.sh
+
+if diff menu menu.sh ; then
+  echo "não houve mudanças"
+else
+  echo "houve mudanças, atualizando..."
+  mv menu.sh menu
+fi
+
 clear
   #TITULO
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0

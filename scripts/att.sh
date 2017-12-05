@@ -51,8 +51,8 @@ wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/ajuda.sh 
 chmod +x /bin/ajuda
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 chmod +x /bin/sshmonitor
-wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh -O /bin/menu
-chmod +x /bin/menu
+#wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh -O /bin/menu
+#chmod +x /bin/menu
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/atualizar.sh -O /bin/atualizar
 chmod +x /bin/atualizar
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/clearcache.sh -O /bin/clearcache
@@ -67,7 +67,7 @@ chmod +x /bin/setup.sh
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 chmod +x /bin/att
 
-rm /bin/setup_script_sousatips.sh 1>/dev/null 2>/dev/null
+rm /bin/setup.sh 1>/dev/null 2>/dev/null
 clear
 
 echo "Download concluido!"
