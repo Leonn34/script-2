@@ -98,7 +98,7 @@ echo "Atualizado com sucesso!"
 sleep 5
 echo ""
 echo "Entrando no menu em:..."
-sleep 5
+sleep 1
 echo ""
 echo "5....."
 sleep 1
@@ -111,5 +111,5 @@ sleep 1
 echo "1."
 sleep 1
 clear
-exit
+exit1
 menu
