@@ -1,0 +1,7 @@
+#COPIE E COLE 1 POR VEZ!
+
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script_vps_sousatips/master/setup_script_sousatips.sh
+
+chmod +x /bin/setup_script_sousatips.sh
+
+bash /bin/setup_script_sousatips.sh

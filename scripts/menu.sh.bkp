@@ -1,0 +1,156 @@
+#!/bin/bash
+#testando loop infinito while
+x="teste"
+menu ()
+{
+  while true $x != "teste"
+  do
+  clear
+  #TITULO
+  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+  apt-get install figlet -y >/dev/null
+  tput setaf 3 ; tput bold ; figlet -f slant Script SSH ; tput sgr0
+  tput setaf 5 ; tput bold ; echo "                                       VERSÃO BETA" ; tput sgr0
+  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+  sleep 0.2
+  tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
+  # MENU
+  sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
+  tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso
+  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+  sleep 0.2
+  tput setaf 7 ; tput bold ; echo "[1] Atualizar Script"
+  sleep 0.2
+  echo "[2] Criar Usuário"
+  sleep 0.2
+  echo "[3] Alterar data do Usuário"
+  sleep 0.2
+  echo "[4] Alterar Limite de Conexões"
+  sleep 0.2
+  echo "[5] Mudar senha"
+  sleep 0.2
+  echo "[6] Remover expirados"
+  sleep 0.2
+  echo "[7] Remover Usuário"
+  sleep 0.2
+  echo "[8] Verifica número de Conexões"
+  sleep 0.2
+  echo "[9] Limitar Conexões [screen]"
+  sleep 0.2
+  echo "[10] Adiciona host"
+  sleep 0.2
+  echo "[11] Deletar host"
+  sleep 0.2
+  echo "[12] Limpar Cache"
+  sleep 0.2
+  echo "[13] Badudp [screen]"
+  sleep 0.2
+  echo "[14] Sair" ; tput sgr0
+  sleep 0.2
+  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+  sleep 0.2
+  echo ""
+  tput setaf 7 ; tput bold ; echo "Digite a opção" ; tput sgr0
+  echo ""
+  read x
+  tput setaf 3 ; tput bold ; echo "Opção informada ($x)" ; tput sgr0
+
+  case "$x" in
+
+    1)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      tput setaf 3 ; tput bold ; echo "Atualizando ..." ; tput sgr0
+      sudo apt-get update > /dev/null
+      sudo apt-get upgrade -y > /dev/null
+      atualizar
+      tput setaf 2 ; tput bold ; echo "Concluído!" ; tput sgr0
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      sleep 4
+      ;;
+    2)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      # COPIEI O CÓDIGO DO CRIAR USUÁRIO AQUI:
+      criarusuario      
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    3)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      # COPIEI O CÓDIGO MUDAR DATA AQUI:
+      mudardata
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    4)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #COPIEI O CÓDIGO ALTERAR LIMITE AQUI:
+      alterarlimite
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    5)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #COPIEI O CÓDIGO ALTERAR SENHA AQUI:
+      alterarsenha
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    6)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei o código expcleaner aqui:
+      expcleaner
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    7)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui:
+      remover
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    8)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui:
+      sshmonitor
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    9)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui:
+      sshlimiter
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    10)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui:
+      addhost
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    11)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui;
+      delhost
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    12)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui;
+      clearcache
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    13)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      #copiei aqui;
+      badudp
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      ;;
+    14)
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      echo "Saindo..."
+      tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=" ; tput sgr0
+      sleep 4
+      clear
+      exit
+      ;;
+    *)
+      echo "opção invalida"
+      sleep 4
+  esac
+  done
+}
+menu
