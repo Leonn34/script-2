@@ -8,8 +8,8 @@ echo ""
 
 #ATUALIZANDO SISTEMA
 
-apt-get update -y > /dev/null
-apt-get upgrade -y > /dev/null
+apt-get update 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
 
 #cd /bin
 

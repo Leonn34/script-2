@@ -40,9 +40,9 @@ else
 
   sleep 5
   mv menu.sh menu 1>/dev/null 2>/dev/null
-  rm /bin/att
+  rm /bin/att 1>/dev/null 2>/dev/null
 
-	wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
+	wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att 1>/dev/null 2>/dev/null
 	clear
 	chmod +x /bin/att
 	clear
