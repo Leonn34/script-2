@@ -45,7 +45,9 @@ if diff menu menu.sh > /dev/null; then
 	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
 else
   	echo "EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+exit
 fi
+
 
 clear
   #TITULO
