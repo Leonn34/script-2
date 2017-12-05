@@ -50,7 +50,7 @@ clear
   tput setaf 6 ; tput bold ; echo "                                   USUÁRIOS ON:" $(ps x | grep hd | grep -v root | grep priv |wc -l) ; tput sgr0 
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
-  echo -e "\033[01;33m[1] \033[01;37mATUALIZAR\033[00;37m"
+  echo -e "\033[01;33m[1] \033[01;37mVERIFICAR ATUALIZAÇÕES\033[00;37m"
   sleep 0.2
   echo -e "\033[01;33m[2] \033[01;37mCRIAR USUÁRIO SSH\033[00;37m"
   sleep 0.2
