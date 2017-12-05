@@ -51,7 +51,7 @@ else
 
 fi
 clear
-exit
+exit1
 menu
 
 
