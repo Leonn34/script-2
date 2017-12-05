@@ -39,6 +39,8 @@ wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/script
 chmod +x /bin/menu.sh 1>/dev/null 2>/dev/null
 clear
 
+cd /bin
+
 if diff menu menu.sh; then
   echo "não houve mudanças"
   sleep 5
