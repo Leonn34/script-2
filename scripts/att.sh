@@ -18,7 +18,7 @@ echo "Removendo Arquivos..."
 sleep 5
 clear
 
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att 1>/dev/null 2>/dev/null
+rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/menu.sh /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att 1>/dev/null 2>/dev/null
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh 1>/dev/null 2>/dev/null
 echo "Arquivos Removidos!"
 sleep 5
