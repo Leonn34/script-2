@@ -45,7 +45,7 @@ if diff menu menu.sh; then
 else
   echo "houve mudanças, atualizando..."
   sleep 5
-  mv menu.sh menu
+  mv menu.sh menu 1>/dev/null 2>/dev/null
 fi
 
 clear
