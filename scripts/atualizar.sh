@@ -29,13 +29,33 @@ echo -e "\033[1;30m-------------------------------------------------------------
 
 sleep 4
 
-rm /bin/att
+rm /bin/menu.sh
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
+chmod +x /bin/menu.sh
+clear
 
-wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
-clear
-chmod +x /bin/att
-clear
-bash /bin/att
+cd /bin
+
+if diff menu menu.sh; then
+  echo "não houve mudanças"
+  sleep 5
+else
+  echo "houve mudanças, atualizando..."
+  sleep 5
+  mv menu.sh menu 1>/dev/null 2>/dev/null
+  rm /bin/att
+
+	wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
+	clear
+	chmod +x /bin/att
+	clear
+	bash /bin/att
+
+fi
+
+
+
+
 
 #sleep 1
 
