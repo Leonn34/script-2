@@ -56,7 +56,7 @@ clear
 if diff menu menu.sh > /dev/null; then
 	echo -e "\033[1;31mNÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!\033[0;37m"
 else
-	echo " EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
+	echo -e "\033[1;33m EXISTEM ATUALIZAÇÕES DISPONÍVEIS!\033[0;37"
 #exit
 fi
 #######FIM DE ATUALIZAÇÃO############################
