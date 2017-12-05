@@ -18,61 +18,12 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 clear
-rm /bin/menu.sh
-wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
-chmod +x /bin/menu.sh
+
+mv menu.sh menu 1>/dev/null 2>/dev/null
+rm /bin/att 1>/dev/null 2>/dev/null
+
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att 1>/dev/null 2>/dev/null
 clear
-
-cd /bin
-
-if diff menu menu.sh > /dev/null; then
-	echo ""
-	echo "NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"
-  	sleep 5
-  	echo ""
-	echo "ENTER para voltar"
-	read -p " "
-	sleep 1s
-	menu
-	exit1
-else
-  	#echo "houve mudanças, atualizando..."
-  	echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-	echo -e "\033[1;32m         _   _               _ _                    _                 \033[0m"
-	echo -e "\033[1;32m        / \ | |_ _   _  __ _| (_)______ _ _ __   __| | ___            \033[0m" 
-	echo -e "\033[1;32m       / _ \| __| | | |/ _  | | |_  / _  |  _ \ / _  |/ _ \           \033[0m" 
-	echo -e "\033[1;32m      / ___ \ |_| |_| | (_| | | |/ / (_| | | | | (_| | (_) | _ _      \033[0m" 
-	echo -e "\033[1;32m     /_/   \_\__|\__,_|\__,_|_|_/___\__,_|_| |_|\__,_|\___(_|_|_)     \033[0m"
-	echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-
-  sleep 5
-  mv menu.sh menu 1>/dev/null 2>/dev/null
-  rm /bin/att 1>/dev/null 2>/dev/null
-
-	wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att 1>/dev/null 2>/dev/null
-	clear
-	chmod +x /bin/att
-	clear
-	bash /bin/att
-
-fi
+chmod +x /bin/att
 clear
-exit1
-menu
-
-
-
-
-
-#sleep 1
-
-#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-#echo -e "\033[1;32m                _   _ By: Sousa Tips_ _             _                 \033[0m"
-#echo -e "\033[1;32m               / \ | |_ _   _  __ _| (_)______   __| | ___            \033[0m" 
-#echo -e "\033[1;32m              / _ \| __| | | |/ _  | | |_  / _  / _  |/ _ \           \033[0m" 
-#echo -e "\033[1;32m             / ___ \ |_| |_| | (_| | | |/ / (_|  (_| | (_) |          \033[0m" 
-#echo -e "\033[1;32m            /_/   \_\__|\__,_|\__,_|_|_/___\__,_\__,_|\___/           \033[0m"
-#echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-
-#clear
-#exit
+att
