@@ -36,7 +36,8 @@
 
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh
-chmod +x /bin/menu.sh
+chmod +x /bin/menu.sh 1>/dev/null 2>/dev/null
+clear
 
 if diff menu menu.sh; then
   echo "não houve mudanças"
