@@ -32,9 +32,6 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 
-arq=/bin/ver
-arq2=/root/ver
-
 clear
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
@@ -55,6 +52,9 @@ clear
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso ; tput sgr0
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
+arq=/bin/ver
+arq2=/root/ver
+
 if diff $arq $arq2 > /dev/null; then
 tput setaf 7 ; tput bold ;echo " NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
 else
