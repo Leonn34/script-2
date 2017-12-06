@@ -18,7 +18,7 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 clear
-mv arq arq2 > dev/null
+
 mv menu.sh menu 1>/dev/null 2>/dev/null
 rm /bin/att 1>/dev/null 2>/dev/null
 
