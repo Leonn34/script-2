@@ -32,6 +32,7 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 
+
 clear
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
@@ -45,17 +46,14 @@ clear
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   apt-get install figlet -y >/dev/null
   tput setaf 3 ; tput bold ; figlet -f slant Script SSH ; tput sgr0
-  echo -e  "\033[44;1;37m                                     VER. BETA $arq\033[0;37m "
+  echo -e  "\033[44;1;37m                                     VER. BETA 0.4\033[0;37m "
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
   tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso ; tput sgr0
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
-arq=/bin/ver
-arq2=/root/ver
-
-if diff $arq $arq2 > /dev/null; then
+if diff menu menu.sh > /dev/null; then
 tput setaf 7 ; tput bold ;echo " NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
 else
 tput setaf 3 ; tput bold ; echo " HÁ ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
