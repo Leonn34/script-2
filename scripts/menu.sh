@@ -48,7 +48,7 @@ clear
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   apt-get install figlet -y >/dev/null
   tput setaf 3 ; tput bold ; figlet -f slant Script SSH ; tput sgr0
-  echo -e  "\033[44;1;37m                                     VER. BETA 0.4\033[0;37m "
+  echo -e  "\033[44;1;37m                                     VER. BETA $arq\033[0;37m "
   tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
   sleep 0.2
   tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
