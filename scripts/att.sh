@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo ""
-echo "Aguarde..."
+echo "Aguarde...."
 sleep 5
 clear
 echo ""
