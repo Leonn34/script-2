@@ -78,44 +78,44 @@ fi
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   # MENU
-  echo -e $amar"[1]"$fim $mag"APLICAR ATUALIZAÇÕES"$fim
+  echo -e $amar"[1]"$fim $bra"APLICAR ATUALIZAÇÕES"$fim
   sleep 0.2
-  echo -e "\033[01;33m[2] \033[01;37mCRIAR USUÁRIO SSH\033[00;37m"
+  echo -e $amar"[2]"$fim $bra"CRIAR USUÁRIO SSH"$fim
   sleep 0.2
-  echo -e "\033[01;33m[3] \033[01;37mCRIAR BACKUP USUÁRIO\033[00;37m"
+  echo -e $amar"[3]"$fim $bra"CRIAR BACKUP USUÁRIO"$fim
   sleep 0.2
-  echo -e "\033[01;33m[4] \033[01;37mALTERAR DATA DO USUÁRIO\033[00;37m"
+  echo -e $amar"[4]"$fim $bra"ALTERAR DATA DO USUÁRIO"$fim
   sleep 0.2
-  echo -e "\033[01;33m[5] \033[01;37mALTERAR LIMITE DE CONEXÕES\033[00;37m"
+  echo -e $amar"[5]"$fim $bra"ALTERAR LIMITE DE CONEXÕES"$fim
   sleep 0.2
-  echo -e "\033[01;33m[6] \033[01;37mMUDAR SENHA\033[00;37m"
+  echo -e $amar"[6]"$fim $bra"MUDAR SENHA"$fim
   sleep 0.2
-  echo -e "\033[01;33m[7] \033[01;37mREMOVER USUÁRIOS VENCIDOS\033[00;37m"
+  echo -e $amar"[7]"$fim $bra"REMOVER USUÁRIOS VENCIDOS"$fim
   sleep 0.2
-  echo -e "\033[01;33m[8] \033[01;37mREMOVER USUÁRIO\033[00;37m"
+  echo -e $amar"[8]"$fim $bra"REMOVER USUÁRIO"$fim
   sleep 0.2
-  echo -e "\033[01;33m[9] \033[01;37mMOSTRA NÚMERO DE CONEXÕES\033[00;37m"
+  echo -e $amar"[9]"$fim $bra"MOSTRA NÚMERO DE CONEXÕES"$fim
   sleep 0.2
-  echo -e "\033[01;33m[10] \033[01;37mLIMITAR CONEXÕES \033[01;31m[screen]\033[00;37m"
+  echo -e $amar"[10]"$fim $bra"LIMITAR CONEXÕES"$fim $verm"[screen]"$fim
   sleep 0.2
-  echo -e "\033[01;33m[11] \033[01;37mADICIONAR HOST\033[00;37m"
+  echo -e $amar"[11]"$fim $bra"ADICIONAR HOST"$fim
   sleep 0.2
-  echo -e "\033[01;33m[12] \033[01;37mREMOVER HOST\033[00;37m"
+  echo -e $amar"[12]"$fim $bra"REMOVER HOST"$fim
   sleep 0.2
-  echo -e "\033[01;33m[13] \033[01;37mLIMPAR CACHÊ\033[00;37m"
+  echo -e $amar"[13]"$fim $bra"LIMPAR CACHÊ"$fim
   sleep 0.2
-  echo -e "\033[01;33m[14] \033[01;37mBADUDP \033[01;31m[screen]\033[00;37m"
+  echo -e $amar"[14]"$fim $bra"BADUDP"$fim $verm"[screen]"$fim
   sleep 0.2
-  echo -e "\033[01;33m[15] \033[01;37mINICIAR SOCKS \033[01;31m[screen]\033[00;37m"
+  echo -e $amar"[15]"$fim $bra"INICIAR SOCKS"$fim $verm"[screen]"$fim
   sleep 0.2
-  echo -e "\033[01;33m[16] \033[01;37mSAIR\033[00;37m"
+  echo -e $amar"[16]"$fim $bra"SAIR"$fim
   sleep 0.2
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo ""
   
   read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
-  echo -e  " \033[1;30mOPÇÃO ESCOLHIDA:\033[00;37m " $opcao
+  echo -e $pret" OPÇÃO ESCOLHIDA:"$fim $bra$opcao$fim
 
   case $opcao in
 
