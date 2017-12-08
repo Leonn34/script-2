@@ -65,7 +65,7 @@ clear
   sleep 0.2
   tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
-  tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso ; tput sgr0
+  echo -e $verm" Seu sistema:"$fim$cian $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
 echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
@@ -73,9 +73,9 @@ else
 echo -e $amar" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
 fi
 #######FIM DE ATUALIZAÇÃO############################
-  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
+  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   tput setaf 6 ; tput bold ; echo "                                   USUÁRIOS ON:" $(ps x | grep hd | grep -v root | grep priv |wc -l) ; tput sgr0 
-  tput setaf 2 ; tput bold ; echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" ; tput sgr0
+  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   # MENU
   echo -e "\033[01;33m[1] \033[01;37mAPLICAR ATUALIZAÇÕES\033[00;37m"
