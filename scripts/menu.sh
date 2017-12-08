@@ -74,11 +74,11 @@ echo -e $amar" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
 fi
 #######FIM DE ATUALIZAÇÃO############################
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-  echo -e $cian"                                   USUÁRIOS ON:"$fim$verd$(ps x | grep hd | grep -v root | grep priv |wc -l)$fim 
+  echo -e $cian"                                     USUÁRIOS ON:"$fim $verd$(ps x | grep hd | grep -v root | grep priv |wc -l)$fim 
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   # MENU
-  echo -e "\033[01;33m[1] \033[01;37mAPLICAR ATUALIZAÇÕES\033[00;37m"
+  echo -e $amar"[1]"$fim $mag"APLICAR ATUALIZAÇÕES"$fim
   sleep 0.2
   echo -e "\033[01;33m[2] \033[01;37mCRIAR USUÁRIO SSH\033[00;37m"
   sleep 0.2
