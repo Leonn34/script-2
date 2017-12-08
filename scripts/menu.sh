@@ -59,7 +59,7 @@ clear
   #TITULO
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
-  tput setaf 3; tput setaf bold; echo "figlet -f slant Script SSH"; tput sgr0
+  tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
   echo -e $bra"                                     VER. BETA 0.1"$fim
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
