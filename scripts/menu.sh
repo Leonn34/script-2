@@ -114,8 +114,8 @@ fi
   sleep 0.2
   echo ""
   
-  #read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
-  read -p echo -e $amar" DIGITE SUA OPÇÃO:"$fim$azul" [01-16]"$fim opcao
+  read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
+
   echo -e $pret" OPÇÃO ESCOLHIDA:"$fim $bra$opcao$fim
 
   case $opcao in
