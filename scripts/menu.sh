@@ -59,16 +59,16 @@ clear
   #TITULO
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
-  tput setaf 3 ; tput bold ; figlet -f slant Script SSH ; tput sgr0
-  echo -e  "\033[44;1;37m                                     VER. BETA 0.4\033[0;37m "
+  echo -e$amar"figlet -f slant Script SSH"$fim
+  echo -e $bra"                                     VER. BETA 0.1"$fim
   echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
-  tput setaf 3 ; tput bold ; echo " Powered by | Sousa Tips ®" ; tput sgr0
+  echo -e $amar" Powered by | Sousa Tips ®"$fim
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   echo -e $verm" Seu sistema:"$fim$cian $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
-echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
+#echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 echo -e $amar" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
 fi
@@ -122,7 +122,7 @@ fi
 
     1)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      tput setaf 3 ; tput bold ; echo "Aguarde..." ; tput sgr0
+      echo -e$amar"Aguarde..."$fim
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 2
       atualizar
@@ -130,80 +130,66 @@ fi
       ;;
     2)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      # COPIEI O CÓDIGO DO CRIAR USUÁRIO AQUI:
       criarusuario      
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     3)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      # COPIEI O CÓDIGO DO CRIAR USUÁRIO AQUI:
       userbkp      
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     4)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      # COPIEI O CÓDIGO MUDAR DATA AQUI:
       mudardata
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     5)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #COPIEI O CÓDIGO ALTERAR LIMITE AQUI:
       alterarlimite
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     6)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #COPIEI O CÓDIGO ALTERAR SENHA AQUI:
       alterarsenha
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     7)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei o código expcleaner aqui:
       expcleaner
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     8)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui:
       remover
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     9)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui:
       sshmonitor
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     10)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui:
       sshlimiter
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     11)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui:
       addhost
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     12)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui;
       delhost
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     13)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui;
       clearcache
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     14)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      #copiei aqui;
-      #badudp
       echo "Colocar comando para abrir"
       sleep 5
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -237,6 +223,6 @@ fi
       exit1
       ;;
     *)
-      tput setaf 1 ; tput bold ; echo "OPÇÃO INVÁLIDA!!!" ; tput sgr0
+      echo -e $verm"OPÇÃO INVÁLIDA!!!"$fim
       sleep 4
   esac
