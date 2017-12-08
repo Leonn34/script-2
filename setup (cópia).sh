@@ -2,22 +2,6 @@
 
 clear
 
-progress-bar() {
-  local duration=${1}
-
-  already_done() { for ((done=0; done<elapsed; done=done+1)); do printf "▇"; done }
-  remaining() { for ((remain=elapsed; remain<duration; remain=remain+1)); do printf " "; done }
-  percentage() { printf "| %s%%" $(( ((elapsed)*100)/(duration)*100/100 )); }
-  clean_line() { printf "\r"; }
-
-  for (( elapsed=1; elapsed<=duration; elapsed=elapsed+1 )); do
-      already_done; remaining; percentage
-      sleep 1
-      clean_line
-  done
-  clean_line
-}
-
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "BEM VINDO AO VPS-SOUSA TIPS" ; tput sgr0
 sleep 2
 echo ""
