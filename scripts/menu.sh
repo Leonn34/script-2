@@ -68,7 +68,7 @@ clear
   echo -e $verm" Seu sistema:"$fim$cian $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
-#echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
+echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 echo -e $amar" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
 fi
