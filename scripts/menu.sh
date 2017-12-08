@@ -1,4 +1,5 @@
 #!/bin/bash
+####################################
 #CORES:
 #ESTILOS:
 #00: Nenhum
@@ -27,12 +28,25 @@
 #45: Magenta (Rosa)
 #46: Ciano (Azul Ciano)
 #47: Branco
-####################################
 ###############EXEMPLO:#############
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
-
-
+#############################################
+##CORES DE FONTES EM BOLD,###################
+##INSERIR A COR NO INÍCIO E FINALIZA COM FIM
+##EXEMPLO:
+## echo -e $amar"SEU_TEXTO_AQUI"$fim
+#############################################
+pret="\033[1;30m"
+verm="\033[1;31m"
+verd="\033[1;32m"
+amar="\033[1;33m" 
+azul="\033[1;34m"
+mag="\033[1;35m"
+cian="\033[1;36m"
+bra="\033[1;37m"
+fim="\033[0;37m"
+#############################################
 clear
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
@@ -54,7 +68,7 @@ clear
   tput setaf 5 ; tput bold ; echo " Seu sistema:" $sso ; tput sgr0
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
-tput setaf 7 ; tput bold ;echo " NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
+echo -e $azul" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 tput setaf 3 ; tput bold ; echo " HÁ ATUALIZAÇÕES DISPONÍVEIS!" ; tput sgr0
 fi
