@@ -229,9 +229,12 @@ fi
       echo " 4° - Se tiver utilizando squid, comente a porta utilizada no SOCKS." ;
       sleep 1
       echo " 5° - Reinicie o squid!" ; tput sgr0
-      sleep 20
-      menu
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo ""
+      echo "ENTER para voltar"
+      read -p ""
+      sleep 1
+      menu
       ;;
     16)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
