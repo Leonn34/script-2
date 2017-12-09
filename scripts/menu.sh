@@ -69,8 +69,7 @@ clear
   echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
   tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
-  echo -e $branco
-"                                     VER. BETA 0.1"$fim
+  echo -e $branco"                                     VER. BETA 0.1"$fim
   echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo -e $amarelo" Powered by | Sousa Tips ®"$fim
@@ -88,53 +87,37 @@ fi
   echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   # MENU
-  echo -e $amarelo"[1]"$fim $branco
-"APLICAR ATUALIZAÇÕES"$fim
+  echo -e $amarelo"[1]"$fim $branco"APLICAR ATUALIZAÇÕES"$fim
   sleep 0.2
-  echo -e $amarelo"[2]"$fim $branco
-"CRIAR USUÁRIO SSH"$fim
+  echo -e $amarelo"[2]"$fim $branco"CRIAR USUÁRIO SSH"$fim
   sleep 0.2
-  echo -e $amarelo"[3]"$fim $branco
-"CRIAR BACKUP USUÁRIO"$fim
+  echo -e $amarelo"[3]"$fim $branco"CRIAR BACKUP USUÁRIO"$fim
   sleep 0.2
-  echo -e $amarelo"[4]"$fim $branco
-"ALTERAR DATA DO USUÁRIO"$fim
+  echo -e $amarelo"[4]"$fim $branco"ALTERAR DATA DO USUÁRIO"$fim
   sleep 0.2
-  echo -e $amarelo"[5]"$fim $branco
-"ALTERAR LIMITE DE CONEXÕES"$fim
+  echo -e $amarelo"[5]"$fim $branco"ALTERAR LIMITE DE CONEXÕES"$fim
   sleep 0.2
-  echo -e $amarelo"[6]"$fim $branco
-"MUDAR SENHA"$fim
+  echo -e $amarelo"[6]"$fim $branco"MUDAR SENHA"$fim
   sleep 0.2
-  echo -e $amarelo"[7]"$fim $branco
-"REMOVER USUÁRIOS VENCIDOS"$fim
+  echo -e $amarelo"[7]"$fim $branco"REMOVER USUÁRIOS VENCIDOS"$fim
   sleep 0.2
-  echo -e $amarelo"[8]"$fim $branco
-"REMOVER USUÁRIO"$fim
+  echo -e $amarelo"[8]"$fim $branco"REMOVER USUÁRIO"$fim
   sleep 0.2
-  echo -e $amarelo"[9]"$fim $branco
-"MOSTRA NÚMERO DE CONEXÕES"$fim
+  echo -e $amarelo"[9]"$fim $branco"MOSTRA NÚMERO DE CONEXÕES"$fim
   sleep 0.2
-  echo -e $amarelo"[10]"$fim $branco
-"LIMITAR CONEXÕES"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[10]"$fim $branco"LIMITAR CONEXÕES"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[11]"$fim $branco
-"ADICIONAR HOST"$fim
+  echo -e $amarelo"[11]"$fim $branco"ADICIONAR HOST"$fim
   sleep 0.2
-  echo -e $amarelo"[12]"$fim $branco
-"REMOVER HOST"$fim
+  echo -e $amarelo"[12]"$fim $branco"REMOVER HOST"$fim
   sleep 0.2
-  echo -e $amarelo"[13]"$fim $branco
-"LIMPAR CACHÊ"$fim
+  echo -e $amarelo"[13]"$fim $branco"LIMPAR CACHÊ"$fim
   sleep 0.2
-  echo -e $amarelo"[14]"$fim $branco
-"BADUDP"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[14]"$fim $branco"BADUDP"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[15]"$fim $branco
-"INICIAR SOCKS"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[15]"$fim $branco"INICIAR SOCKS"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[16]"$fim $branco
-"SAIR"$fim
+  echo -e $amarelo"[16]"$fim $branco"SAIR"$fim
   sleep 0.2
   echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
