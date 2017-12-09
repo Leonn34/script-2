@@ -74,7 +74,7 @@ clear
   sleep 0.2
   echo -e $amarelo" Powered by | Sousa Tips ®"$fim
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
-  echo -e $vermelho" Seu sistema:"$fim$cyan $sso$fim
+  echo -e $vermelhoClaro" Seu sistema:"$fim$cyan $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
 echo -e $branco" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
@@ -105,7 +105,7 @@ fi
   sleep 0.2
   echo -e $amarelo"[9]"$fim $branco"MOSTRA NÚMERO DE CONEXÕES"$fim
   sleep 0.2
-  echo -e $amarelo"[10]"$fim $branco"LIMITAR CONEXÕES"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[10]"$fim $branco"LIMITAR CONEXÕES"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
   echo -e $amarelo"[11]"$fim $branco"ADICIONAR HOST"$fim
   sleep 0.2
@@ -113,9 +113,9 @@ fi
   sleep 0.2
   echo -e $amarelo"[13]"$fim $branco"LIMPAR CACHÊ"$fim
   sleep 0.2
-  echo -e $amarelo"[14]"$fim $branco"BADUDP"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[14]"$fim $branco"BADUDP"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[15]"$fim $branco"INICIAR SOCKS"$fim $vermelho"[screen]"$fim
+  echo -e $amarelo"[15]"$fim $branco"INICIAR SOCKS"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
   echo -e $amarelo"[16]"$fim $branco"SAIR"$fim
   sleep 0.2
@@ -197,7 +197,7 @@ $opcao$fim
      UMA SESSÃO"$bin $verdeClaro"SCREEN"$fim
       sleep 2
       echo -e $branco
-    "DIGITE:"$fim $vermelho"screen"$fim$branco
+    "DIGITE:"$fim $vermelhoClaro"screen"$fim$branco
     ", EM SEGUIDA APERTE"$fim $verdeClaro"ENTER"$fim
       sleep 2
       echo -e $branco
@@ -253,7 +253,7 @@ $opcao$fim
       exit
       ;;
     *)
-      echo -e $vermelho"OPÇÃO INVÁLIDA!!!"$fim
+      echo -e $vermelhoClaro"OPÇÃO INVÁLIDA!!!"$fim
       sleep 4
       menu
   esac
