@@ -208,7 +208,10 @@ fi
       echo -e $amar"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS,"$fim
       echo -e $amar"REPITA OS MESMOS PASSOS!"$fim
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      sleep 5
+      echo ""
+      echo "ENTER para voltar"
+      read -p " "
+      sleep 1
       menu
       ;;
     15)
