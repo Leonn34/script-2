@@ -122,16 +122,14 @@ fi
 
     1)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo -e$amar"Aguarde..."$fim
+      echo -e $amar"Aguarde..."$fim
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 2
       atualizar
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     2)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      criarusuario      
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      criarusuario
       ;;
     3)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -216,8 +214,8 @@ fi
       ;;
     15)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      
       tput setaf 7 ; tput bold ; echo " Para iniciar o SOCKS: " ; tput sgr0
+      echo ""
       tput setaf 6 ; tput bold ; echo " 1° - Entre em /bin," ;
       sleep 0.3
       echo " 2° - Abra uma sessão screen," ;
@@ -243,7 +241,6 @@ fi
       sleep 4
       clear
       exit
-      exit1
       ;;
     *)
       echo -e $verm"OPÇÃO INVÁLIDA!!!"$fim
