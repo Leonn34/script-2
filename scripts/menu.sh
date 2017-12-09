@@ -56,6 +56,7 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 fim="\033[0;37m"
 #############################################
+#baixa o menu.sh pra fazer a verificação
 clear
 rm /bin/menu.sh
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
@@ -69,7 +70,7 @@ clear
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
   tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
-  echo -e $branco"                                     VER. BETA 0.1"$fim
+  echo -e $purpleClaro"                                     VER. BETA 0.1"$fim
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo -e $amarelo" Powered by | Sousa Tips ®"$fim
@@ -126,7 +127,7 @@ fi
   read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   
-  echo -e $preto" OPÇÃO ESCOLHIDA:"$fim $branco$opcao$fim
+  echo -e $cinzaClaro" OPÇÃO ESCOLHIDA:"$fim $branco$opcao$fim
 
   case $opcao in
 
