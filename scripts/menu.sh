@@ -190,12 +190,25 @@ fi
       ;;
     14)
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo "Colocar comando para abrir"
-      sleep 5
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      clear
+      echo -e $amar"COMANDOS PARA RODAR O BADUDP:"$fim
+      sleep 2
+      echo -e $bra"1º - ABRA UMA SESSÃO"$bin $verd"SCREEN"$fim
+      sleep 2
+      echo -e $bra"DIGITE:"$fim $verm"screen"$fim, $bra"EM SEGUIDA APERTE"$fim $verd"ENTER"$fim
+      sleep 2
+      echo -e $bra"2º - DIGITE"$fim $verd"badudp"$fim", E APERTE ENTER"$fim
+      sleep 2
+      echo -e $bra"3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
+      sleep 2
+      echo -e $bra"ENTRE COM: Ctrl+A+D"$fim
+      sleep 2
+      echo -e $bra"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS, REPITA OS MESMOS PASSOS! "$fim
+      sleep 2
+      echo -e $bra"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     15)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $bra"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       
       tput setaf 7 ; tput bold ; echo " Para iniciar o SOCKS: " ; tput sgr0
       tput setaf 6 ; tput bold ; echo " 1° - Entre em /bin," ;
