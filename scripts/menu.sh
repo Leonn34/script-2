@@ -10,19 +10,19 @@
 #08: Oculto
 ####################################
 #CORES TEXTO:
-#30: pretoo
+#30: preto
 #31: Vermelho
-#32: verdee
-#33: amareloelo
+#32: verde
+#33: amarelo
 #34: Azul
 #35: Magenta (Rosa)
 #36: Ciano (Azul Ciano)
-#37: branconco
+#37: branco
 ####################################
 #CORES FUNDO:
 #40: pretoo
 #41: Vermelho
-#42: verdee
+#42: verde
 #43: Amarelo
 #44: Azul
 #45: Magenta (Rosa)
@@ -32,10 +32,10 @@
 #Viva o Linux
 #echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
 #############################################
-##CORES DE FONTES EM BOLD,###################
+##CORES DE FONTES,###################
 ##INSERIR A COR NO INÍCIO E FINALIZA COM FIM
 ##EXEMPLO:
-## echo -e $amar"SEU_TEXTO_AQUI"$fim
+## echo -e $amarelo"SEU_TEXTO_AQUI"$fim
 #############################################
 corPadrao="\033[0m"
 preto="\033[0;30m"
@@ -191,23 +191,15 @@ fi
       echo -e $amarelo"COMANDOS PARA RODAR O BADUDP:"$fim
       sleep 2
       echo ""
-      echo -e $branco
-    "1º - Abranco
-     UMA SESSÃO"$bin $verdeClaro"SCREEN"$fim
+      echo -e $branco"1º - ABRA UMA SESSÃO"$fim $verdeClaro"SCREEN"$fim
       sleep 2
-      echo -e $branco
-    "DIGITE:"$fim $vermelhoClaro"screen"$fim$branco
-    ", EM SEGUIDA APERTE"$fim $verdeClaro"ENTER"$fim
+      echo -e $branco"DIGITE:"$fim $vermelhoClaro"screen"$fim$branco", EM SEGUIDA APERTE"$fim $verdeClaro"ENTER"$fim
       sleep 2
-      echo -e $branco
-    "2º - DIGITE"$fim $verdeClaro"badudp"$fim$branco
-    ", E APERTE"$fim $verdeClaro"ENTER"$fim
+      echo -e $branco"2º - DIGITE"$fim $verdeClaro"badudp"$fim$branco", E APERTE"$fim $verdeClaro"ENTER"$fim
       sleep 2
-      echo -e $branco
-    "3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
+      echo -e $branco"3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
       sleep 2
-      echo -e $branco
-    "ENTRE COM:"$fim $verdeClaro"Ctrl+A+D"$fim
+      echo -e $branco"ENTRE COM:"$fim $verdeClaro"Ctrl+A+D"$fim
       sleep 2
       echo ""
       echo -e $amarelo"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS,"$fim
@@ -225,8 +217,7 @@ fi
       echo ""
       tput setaf 6 ; tput bold ; echo " 1° - Entre em /bin," ;
       sleep 0.3
-      echo " 2° - Abranco
-     uma sessão screen," ;
+      echo " 2° - Abra uma sessão screen," ;
       sleep 1
       echo " 3° - Digite o comando e a porta desejada," ; 
       sleep 1
@@ -244,8 +235,7 @@ fi
       ;;
     16)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo -e $branco
-    "Saindo..."$fim
+      echo -e $branco"Saindo..."$fim
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 4
       clear
