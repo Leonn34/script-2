@@ -198,17 +198,17 @@ fi
       sleep 2
       echo -e $bra"DIGITE:"$fim $verm"screen"$fim$bra", EM SEGUIDA APERTE"$fim $verd"ENTER"$fim
       sleep 2
-      echo -e $bra"2º - DIGITE"$fim $verd"badudp"$fim $bra", E APERTE"$fim $verd"ENTER"$fim
+      echo -e $bra"2º - DIGITE"$fim $verd"badudp"$fim$bra", E APERTE"$fim $verd"ENTER"$fim
       sleep 2
       echo -e $bra"3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
       sleep 2
       echo -e $bra"ENTRE COM:"$fim $verd"Ctrl+A+D"$fim
       sleep 2
       echo ""
-      echo -e $amar"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS, REPITA OS MESMOS PASSOS! "$fim
+      echo -e $amar"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS,"$fim
+      echo -e $amar"REPITA OS MESMOS PASSOS!"$fim
       echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 5
-      exit
       menu
       ;;
     15)
