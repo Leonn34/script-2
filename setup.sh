@@ -1,61 +1,74 @@
 #!/bin/bash
 
+###############EXEMPLO:#############
+#Viva o Linux
+#echo -e '\033[01;37mViva o \033[04;32mLinux\033[00;37m!!!'
+#############################################
+##CORES DE FONTES EM BOLD,###################
+##INSERIR A COR NO INÍCIO E FINALIZA COM FIM
+##EXEMPLO:
+## echo -e $amar"SEU_TEXTO_AQUI"$fim
+#############################################
+pret="\033[1;30m"
+verm="\033[1;31m"
+verd="\033[1;32m"
+amar="\033[1;33m" 
+azul="\033[1;34m"
+mag="\033[1;35m"
+cian="\033[1;36m"
+bra="\033[1;37m"
+fim="\033[0;37m"
+#############################################
+
 clear
 
-progress-bar() {
-  local duration=${1}
-
-  already_done() { for ((done=0; done<elapsed; done=done+1)); do printf "▇"; done }
-  remaining() { for ((remain=elapsed; remain<duration; remain=remain+1)); do printf " "; done }
-  percentage() { printf "| %s%%" $(( ((elapsed)*100)/(duration)*100/100 )); }
-  clean_line() { printf "\r"; }
-
-  for (( elapsed=1; elapsed<=duration; elapsed=elapsed+1 )); do
-      already_done; remaining; percentage
-      sleep 1
-      clean_line
-  done
-  clean_line
-}
-
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "BEM VINDO AO VPS-SOUSA TIPS" ; tput sgr0
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+echo -e $bra"BEM VINDO AO SCRIPT SOUSA TIPS"$fim
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 2
 echo ""
-tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+echo -e $bra"Este script irá:"$fim
 sleep 1
-tput setaf 3 ; tput bold ; echo "========================================================" ; tput sgr0
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 1
-tput setaf 7 ; tput bold ; echo " ● Instalar e configurar o proxy squid nas portas" 
-echo "80, 3128, 8080 e 8799 para permitir,"
-echo "conexões SSH para este servidor"
+echo -e $bra" ● Instalar e configurar o proxy squid nas portas"$fim 
+echo -e $bra"80, 3128, 8080 e 8799 para permitir,"$fim
+echo -e $bra"conexões SSH para este servidor"$fim
 sleep 2
-echo " ● Configurar o OpenSSH para rodar nas portas 22 e 443"
+echo -e $bra" ● Configurar o OpenSSH para rodar nas portas 22 e 443"$fim
 sleep 2
-echo " ● Instalar um conjunto de scripts como comandos do" 
-echo "sistema para o gerenciamento de usuários" ; tput sgr0
+echo -e $bra" ● Instalar um conjunto de scripts como comandos do" 
+echo -e $bra"sistema para o gerenciamento de usuários"$fim
 sleep 2
-tput setaf 3 ; tput bold ; echo "========================================================" ; tput sgr0
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 2
 echo ""
-tput setaf 2 ; tput bold ; read -n 1 -s -p "Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+tput setaf 2 ; tput bold ; read -n 1 -s -p "APERTE QUALQUER TECLA PARA CONTINUAR..." ; echo "" ; echo "" ; tput sgr0
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 echo ""
 IP=$(wget -qO- ipv4.icanhazip.com)
-read -p "Para continuar confirme o IP deste servidor: " -e -i $IP ipdovps
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+read -p "ESTÁ CORRETO O SEU IP? " -e -i $IP ipdovps
+echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 if [ -z "$ipdovps" ]
 then
-	tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "" ; echo " Você não digitou o IP deste servidor. Tente novamente. " ; echo "" ; echo "" ; tput sgr0
+	echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+	echo -e $verm" PRECISA DIGITAR O IP DO SERVIDOR! "$fim
+	echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 	exit 1
 fi
 if [ -f "/root/usuarios.db" ]
 then
-tput setaf 6 ; tput bold ;	echo ""
-	echo "Uma base de dados de usuários ('usuarios.db') foi encontrada!"
-	echo "Deseja mantê-la (preservando o limite de conexões simultâneas dos usuários)"
-	echo "ou criar uma nova base de dados?"
-	tput setaf 6 ; tput bold ;	echo ""
-	echo "[1] Manter Base de Dados Atual"
-	echo "[2] Criar uma Nova Base de Dados"
-	echo "" ; tput sgr0
+	echo ""
+	echo -e $amar"Uma base de dados de usuários ('usuarios.db') foi encontrada!"$fim
+	echo -e $amar"Deseja mantê-la (preservando o limite de conexões simultâneas dos usuários)"$fim
+	echo -e $amar"ou criar uma nova base de dados?"$fim
+	echo ""
+	echo -e $verd"[1] Manter Base de Dados Atual"$fim
+	echo -e $verd"[2] Criar uma Nova Base de Dados"$fim
+	echo ""
 	read -p "Opção?: " -e -i 1 optiondb
 else
 	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > /root/usuarios.db
@@ -63,7 +76,8 @@ fi
 echo ""
 read -p "Deseja ativar a compressão SSH (pode aumentar o consumo de RAM)? [s/n]) " -e -i n sshcompression
 echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Aguarde a configuração automática" ; echo "" ; tput sgr0
+echo -e $verd"Aguarde a configuração automática"$fim
+echo ""
 sleep 3
 apt-get update -y > /dev/null
 apt-get upgrade -y > /dev/null
@@ -207,23 +221,23 @@ fi
 rm /bin/setup_script_sousatips.sh
 clear
 echo ""
-tput setaf 2 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8799" ; tput sgr0
-tput setaf 2 ; tput bold ; echo "OpenSSH rodando nas portas 22 e 443" ; tput sgr0
-tput setaf 2 ; tput bold ; echo "Para ver os comandos disponíveis use o comando: menu" ; tput sgr0
+echo -e $verd"Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8799"$fim
+echo -e $verd"OpenSSH rodando nas portas 22 e 443"$fim
+echo -e $verd"Para ver os comandos disponíveis use o comando: menu"$fim
 echo ""
 sleep 7
-echo "Entrando no menu em:"
-sleep 5
+echo -e $bra"ENTRANDO NO MENU EM..."$fim
+sleep 1
 echo ""
-echo "5"
+echo -e $verd"5"$fim
 sleep 1
-echo "4"
+echo -e $verd"4"$fim
 sleep 1
-echo "3"
+echo -e $verd"3"$fim
 sleep 1
-echo "2"
+echo -e $verd"2"$fim
 sleep 1
-echo "1"
+echo -e $verd"1"$fim
 clear
 menu
 
