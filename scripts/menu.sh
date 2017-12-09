@@ -10,19 +10,19 @@
 #08: Oculto
 ####################################
 #CORES TEXTO:
-#30: Preto
+#30: pretoo
 #31: Vermelho
-#32: Verde
-#33: Amarelo
+#32: verdee
+#33: amareloelo
 #34: Azul
 #35: Magenta (Rosa)
 #36: Ciano (Azul Ciano)
-#37: Branco
+#37: branconco
 ####################################
 #CORES FUNDO:
-#40: Preto
+#40: pretoo
 #41: Vermelho
-#42: Verde
+#42: verdee
 #43: Amarelo
 #44: Azul
 #45: Magenta (Rosa)
@@ -37,14 +37,23 @@
 ##EXEMPLO:
 ## echo -e $amar"SEU_TEXTO_AQUI"$fim
 #############################################
-pret="\033[1;30m"
-verm="\033[1;31m"
-verd="\033[1;32m"
-amar="\033[1;33m" 
-azul="\033[1;34m"
-mag="\033[1;35m"
-cian="\033[1;36m"
-bra="\033[1;37m"
+corPadrao="\033[0m"
+preto="\033[0;30m"
+vermelho="\033[0;31m"
+verde="\033[0;32m"
+marrom="\033[0;33m"
+azul="\033[0;34m"
+purple="\033[0;35m"
+cyan="\033[0;36m"
+cinzaClaro="\033[0;37m"
+pretoCinza="\033[1;30m"
+vermelhoClaro="\033[1;31m"
+verdeClaro="\033[1;32m"
+amarelo="\033[1;33m"
+azulClaro="\033[1;34m"
+purpleClaro="\033[1;35m"
+cyanClaro="\033[1;36m"
+branco="\033[1;37m"
 fim="\033[0;37m"
 #############################################
 clear
@@ -57,168 +66,185 @@ cd /bin
 
 clear
   #TITULO
-  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
   tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
-  echo -e $bra"                                     VER. BETA 0.1"$fim
-  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  echo -e $branco
+"                                     VER. BETA 0.1"$fim
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
-  echo -e $amar" Powered by | Sousa Tips ®"$fim
+  echo -e $amarelo" Powered by | Sousa Tips ®"$fim
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
-  echo -e $verm" Seu sistema:"$fim$cian $sso$fim
+  echo -e $vermelho" Seu sistema:"$fim$cian $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if diff menu menu.sh > /dev/null; then
-echo -e $bra" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
+echo -e $branco" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
-echo -e $amar" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
+echo -e $amarelo" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
 fi
 #######FIM DE ATUALIZAÇÃO############################
-  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-  echo -e $cian"                                     USUÁRIOS ON:"$fim $verd$(ps x | grep hd | grep -v root | grep priv |wc -l)$fim 
-  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  echo -e $cian"                                     USUÁRIOS ON:"$fim $verde$(ps x | grep hd | grep -v root | grep priv |wc -l)$fim 
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   # MENU
-  echo -e $amar"[1]"$fim $bra"APLICAR ATUALIZAÇÕES"$fim
+  echo -e $amarelo"[1]"$fim $branco
+"APLICAR ATUALIZAÇÕES"$fim
   sleep 0.2
-  echo -e $amar"[2]"$fim $bra"CRIAR USUÁRIO SSH"$fim
+  echo -e $amarelo"[2]"$fim $branco
+"CRIAR USUÁRIO SSH"$fim
   sleep 0.2
-  echo -e $amar"[3]"$fim $bra"CRIAR BACKUP USUÁRIO"$fim
+  echo -e $amarelo"[3]"$fim $branco
+"CRIAR BACKUP USUÁRIO"$fim
   sleep 0.2
-  echo -e $amar"[4]"$fim $bra"ALTERAR DATA DO USUÁRIO"$fim
+  echo -e $amarelo"[4]"$fim $branco
+"ALTERAR DATA DO USUÁRIO"$fim
   sleep 0.2
-  echo -e $amar"[5]"$fim $bra"ALTERAR LIMITE DE CONEXÕES"$fim
+  echo -e $amarelo"[5]"$fim $branco
+"ALTERAR LIMITE DE CONEXÕES"$fim
   sleep 0.2
-  echo -e $amar"[6]"$fim $bra"MUDAR SENHA"$fim
+  echo -e $amarelo"[6]"$fim $branco
+"MUDAR SENHA"$fim
   sleep 0.2
-  echo -e $amar"[7]"$fim $bra"REMOVER USUÁRIOS VENCIDOS"$fim
+  echo -e $amarelo"[7]"$fim $branco
+"REMOVER USUÁRIOS VENCIDOS"$fim
   sleep 0.2
-  echo -e $amar"[8]"$fim $bra"REMOVER USUÁRIO"$fim
+  echo -e $amarelo"[8]"$fim $branco
+"REMOVER USUÁRIO"$fim
   sleep 0.2
-  echo -e $amar"[9]"$fim $bra"MOSTRA NÚMERO DE CONEXÕES"$fim
+  echo -e $amarelo"[9]"$fim $branco
+"MOSTRA NÚMERO DE CONEXÕES"$fim
   sleep 0.2
-  echo -e $amar"[10]"$fim $bra"LIMITAR CONEXÕES"$fim $verm"[screen]"$fim
+  echo -e $amarelo"[10]"$fim $branco
+"LIMITAR CONEXÕES"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amar"[11]"$fim $bra"ADICIONAR HOST"$fim
+  echo -e $amarelo"[11]"$fim $branco
+"ADICIONAR HOST"$fim
   sleep 0.2
-  echo -e $amar"[12]"$fim $bra"REMOVER HOST"$fim
+  echo -e $amarelo"[12]"$fim $branco
+"REMOVER HOST"$fim
   sleep 0.2
-  echo -e $amar"[13]"$fim $bra"LIMPAR CACHÊ"$fim
+  echo -e $amarelo"[13]"$fim $branco
+"LIMPAR CACHÊ"$fim
   sleep 0.2
-  echo -e $amar"[14]"$fim $bra"BADUDP"$fim $verm"[screen]"$fim
+  echo -e $amarelo"[14]"$fim $branco
+"BADUDP"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amar"[15]"$fim $bra"INICIAR SOCKS"$fim $verm"[screen]"$fim
+  echo -e $amarelo"[15]"$fim $branco
+"INICIAR SOCKS"$fim $vermelho"[screen]"$fim
   sleep 0.2
-  echo -e $amar"[16]"$fim $bra"SAIR"$fim
+  echo -e $amarelo"[16]"$fim $branco
+"SAIR"$fim
   sleep 0.2
-  echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo ""
   
   read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
-
-  echo -e $pret" OPÇÃO ESCOLHIDA:"$fim $bra$opcao$fim
+  echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+  
+  echo -e $preto" OPÇÃO ESCOLHIDA:"$fim $branco
+$opcao$fim
 
   case $opcao in
 
     1)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo -e $amar"Aguarde..."$fim
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $amarelo"Aguarde..."$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 2
       atualizar
       ;;
     2)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       criarusuario
       ;;
     3)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      userbkp      
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      userbkp
       ;;
     4)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       mudardata
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     5)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       alterarlimite
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     6)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       alterarsenha
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     7)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       expcleaner
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     8)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       remover
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     9)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sshmonitor
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     10)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sshlimiter
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     11)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       addhost
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     12)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       delhost
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     13)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       clearcache
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       ;;
     14)
       clear
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo -e $amar"COMANDOS PARA RODAR O BADUDP:"$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $amarelo"COMANDOS PARA RODAR O BADUDP:"$fim
       sleep 2
       echo ""
-      echo -e $bra"1º - ABRA UMA SESSÃO"$bin $verd"SCREEN"$fim
+      echo -e $branco
+    "1º - Abranco
+     UMA SESSÃO"$bin $verde"SCREEN"$fim
       sleep 2
-      echo -e $bra"DIGITE:"$fim $verm"screen"$fim$bra", EM SEGUIDA APERTE"$fim $verd"ENTER"$fim
+      echo -e $branco
+    "DIGITE:"$fim $vermelho"screen"$fim$branco
+    ", EM SEGUIDA APERTE"$fim $verde"ENTER"$fim
       sleep 2
-      echo -e $bra"2º - DIGITE"$fim $verd"badudp"$fim$bra", E APERTE"$fim $verd"ENTER"$fim
+      echo -e $branco
+    "2º - DIGITE"$fim $verde"badudp"$fim$branco
+    ", E APERTE"$fim $verde"ENTER"$fim
       sleep 2
-      echo -e $bra"3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
+      echo -e $branco
+    "3º - PARA SAIR E DEIXAR A SESSÃO RODANDO,"$fim
       sleep 2
-      echo -e $bra"ENTRE COM:"$fim $verd"Ctrl+A+D"$fim
+      echo -e $branco
+    "ENTRE COM:"$fim $verde"Ctrl+A+D"$fim
       sleep 2
       echo ""
-      echo -e $amar"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS,"$fim
-      echo -e $amar"REPITA OS MESMOS PASSOS!"$fim
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $amarelo"OBS.: A CADA VEZ QUE FOR REINICIADO A VPS,"$fim
+      echo -e $amarelo"REPITA OS MESMOS PASSOS!"$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo ""
       echo "ENTER para voltar"
-      read -p " "
+      read -p ""
       sleep 1
       menu
       ;;
     15)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       tput setaf 7 ; tput bold ; echo " Para iniciar o SOCKS: " ; tput sgr0
       echo ""
       tput setaf 6 ; tput bold ; echo " 1° - Entre em /bin," ;
       sleep 0.3
-      echo " 2° - Abra uma sessão screen," ;
+      echo " 2° - Abranco
+     uma sessão screen," ;
       sleep 1
       echo " 3° - Digite o comando e a porta desejada," ; 
       sleep 1
@@ -227,7 +253,7 @@ fi
       echo " 4° - Se tiver utilizando squid, comente a porta utilizada no SOCKS." ;
       sleep 1
       echo " 5° - Reinicie o squid!" ; tput sgr0
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo ""
       echo "ENTER para voltar"
       read -p ""
@@ -235,14 +261,16 @@ fi
       menu
       ;;
     16)
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      tput setaf 3 ; tput bold ; echo "Saindo..." ; tput sgr0
-      echo -e $verd"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $branco
+    "Saindo..."$fim
+      echo -e $verde"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       sleep 4
       clear
       exit
       ;;
     *)
-      echo -e $verm"OPÇÃO INVÁLIDA!!!"$fim
+      echo -e $vermelho"OPÇÃO INVÁLIDA!!!"$fim
       sleep 4
+      menu
   esac
