@@ -172,7 +172,15 @@ fi
       ;;
     10)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      sshlimiter
+      echo "PARA ATIVAR O LIMITE DE CONEXÔES:"
+      echo "ABRA UMA SESSÃO SCREEN, DIGITE: screen E APERTE ENTER."
+      echo "DIGITE: sshlimiter"
+      echo "PARA SAIR E DEIXAR RODANDO, DIGITE: CTRL+A+D"
+      echo "OBS. REPITA ESSES PROCESSOS A CADA VEZ QUE REINICIAR A VPS!"
+      echo "ENTER para voltar"
+      read -p ""
+      sleep 1
+      menu
       ;;
     11)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
