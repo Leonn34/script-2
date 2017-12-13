@@ -59,6 +59,14 @@ echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 5
 clear
 
+#################################
+BARRAS DE CARREGAMENTO
+for a in $(seq 1 10); do
+echo -ne "||"
+sleep 0.5s
+done
+#################################
+
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/addhost.sh -O /bin/addhost
 chmod +x /bin/addhost
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/alterarsenha.sh -O /bin/alterarsenha
