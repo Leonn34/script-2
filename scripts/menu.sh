@@ -74,7 +74,7 @@ clear
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
   tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
-  echo -e $amarelo$ver$fim | xargs echo -ne $branco"                                   VERSAO BETA:"$fim; echo ""
+  echo -e $purpleClaro$ver$fim | xargs echo -ne $branco"                                   VERSAO BETA:"$fim; echo ""
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo -e $amarelo" Powered by | Sousa Tips ®"$fim
