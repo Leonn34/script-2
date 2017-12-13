@@ -81,7 +81,7 @@ echo ""
 sleep 3
 apt-get update -y > /dev/null
 apt-get upgrade -y > /dev/null
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att 1>/dev/null 2>/dev/null
+rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att /bin/ver /bin/ver1 1>/dev/null 2>/dev/null
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh 1>/dev/null 2>/dev/null
 
 apt-get install squid3 bc screen nano unzip dos2unix wget -y > /dev/null
@@ -141,6 +141,8 @@ then
 	chmod +x /bin/setup.sh
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 	chmod +x /bin/att
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/ver -O /bin/ver
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/ver1 -O /bin/ver1
 	
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -204,6 +206,8 @@ then
 	chmod +x /bin/setup.sh
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 	chmod +x /bin/att
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/ver -O /bin/ver
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/ver1 -O /bin/ver1
 	
 	if [ ! -f "/etc/init.d/squid" ]
 	then

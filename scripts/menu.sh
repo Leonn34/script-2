@@ -56,31 +56,36 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 fim="\033[0;37m"
 #############################################
-#baixa o menu.sh pra fazer a verificação
-clear
-rm /bin/menu.sh
-wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/menu.sh 1>/dev/null 2>/dev/null
-chmod +x /bin/menu.sh
+#baixa o ver1 pra fazer a verificação
 clear
 
+rm /bin/ver1 > /dev/null
+
+wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/ver1 > /dev/null
+
 cd /bin
+
+arq="/bin/ver"
+arq1="/bin/ver1"
+ver=$(cat $arq)
 
 clear
   #TITULO
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   apt-get install figlet -y >/dev/null
   tput setaf 3; tput bold; figlet -f slant Script SSH; tput sgr0
-  echo -e $purpleClaro"                                     VER. BETA 0.1"$fim
+  echo -e $amarelo$ver$fim | xargs echo -ne $branco"                                   VERSAO BETA:"$fim; echo ""
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo -e $amarelo" Powered by | Sousa Tips ®"$fim
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   echo -e $vermelhoClaro" Seu sistema:"$fim$cyan $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
-if diff menu menu.sh > /dev/null; then
+if diff $arq $arq1 > /dev/null; then
 echo -e $branco" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 echo -e $amarelo" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
+mv $arq1 $arq
 fi
 #######FIM DE ATUALIZAÇÃO############################
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim

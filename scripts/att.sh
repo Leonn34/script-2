@@ -124,6 +124,14 @@ if [ ! -f "/etc/init.d/ssh" ]
 	else
 		/etc/init.d/ssh reload > /dev/null
 fi
+
+################
+#arq="/bin/ver"
+#arq1="/bin/ver1"
+
+#mv $arq1 $arq
+################RENOMEANDO ARQUIVO VER1 PARA VER
+
 clear
 echo ""
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
