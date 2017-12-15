@@ -132,7 +132,7 @@ fi
   sleep 0.2
   echo ""
   
-  read -p " DIGITE SUA OPÇÃO: [01-16] " opcao
+  read -p " DIGITE SUA OPÇÃO: [01-17] " opcao
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   
   echo -e $cinzaClaro" OPÇÃO ESCOLHIDA:"$fim $branco$opcao$fim
