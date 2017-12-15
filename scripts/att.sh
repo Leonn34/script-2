@@ -32,8 +32,8 @@ echo ""
 
 #ATUALIZANDO SISTEMA
 
-apt-get update 1>/dev/null 2>/dev/null
-apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get update >/dev/null 2>/dev/null
+apt-get upgrade -y >/dev/null 2>/dev/null
 
 #cd /bin
 
@@ -44,8 +44,8 @@ echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 5
 clear
 
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/menu.sh /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att 1>/dev/null 2>/dev/null
-rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh 1>/dev/null 2>/dev/null
+rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/menu.sh /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att >/dev/null 2>/dev/null
+rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 echo -e $vermelhoClaro"Arquivos Removidos!"$fim
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -59,13 +59,6 @@ echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 5
 clear
 
-#################################
-BARRAS DE CARREGAMENTO
-for a in $(seq 1 10); do
-echo -ne "||"
-sleep 0.5s
-done
-#################################
 
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/addhost.sh -O /bin/addhost
 chmod +x /bin/addhost
@@ -105,7 +98,7 @@ chmod +x /bin/setup.sh
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 chmod +x /bin/att
 
-rm /bin/setup.sh 1>/dev/null 2>/dev/null
+rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
 
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -132,13 +125,6 @@ if [ ! -f "/etc/init.d/ssh" ]
 	else
 		/etc/init.d/ssh reload > /dev/null
 fi
-
-################
-#arq="/bin/ver"
-#arq1="/bin/ver1"
-
-#mv $arq1 $arq
-################RENOMEANDO ARQUIVO VER1 PARA VER
 
 clear
 echo ""
