@@ -123,7 +123,9 @@ fi
   sleep 0.2
   echo -e $amarelo"[15]"$fim $branco"INICIAR SOCKS"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[16]"$fim $branco"SAIR"$fim
+  echo -e $amarelo"[16]"$fim $branco"TESTE DE VELOCIDADE"$fim
+  sleep 0.2
+  echo -e $amarelo"[17]"$fim $branco"SAIR"$fim
   sleep 0.2
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
@@ -258,6 +260,14 @@ fi
       menu
       ;;
     16)
+      clear
+      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      echo -e $amarelo"TESTANDO VELOCIDADE DO SERVIDOR..."$fim
+      sleep 2
+      clear
+      testeconexao
+      ;;
+    17)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo -e $branco"Saindo..."$fim
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim

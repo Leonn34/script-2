@@ -34,6 +34,11 @@ echo ""
 
 apt-get update >/dev/null 2>/dev/null
 apt-get upgrade -y >/dev/null 2>/dev/null
+apt-get install bc >/dev/null 2>/dev/null
+apt-get install python-pip -y >/dev/null 2>/dev/null
+pip install speedtest-cli >/dev/null 2>/dev/null
+apt-get update >/dev/null 2>/dev/null
+apt-get install -y python3-pip >/dev/null 2>/dev/null
 
 #cd /bin
 
@@ -44,8 +49,25 @@ echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 sleep 5
 clear
 
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/menu.sh /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att >/dev/null 2>/dev/null
+rm /bin/criarusuario >/dev/null 2>/dev/null
+rm /bin/expcleaner >/dev/null 2>/dev/null
+rm /bin/sshlimiter >/dev/null 2>/dev/null
+rm /bin/addhost >/dev/null 2>/dev/null
+rm /bin/sshmonitor >/dev/null 2>/dev/null
+rm /bin/ajuda >/dev/null 2>/dev/null
+rm /bin/menu >/dev/null 2>/dev/null
+rm /bin/menu.sh >/dev/null 2>/dev/null
+rm /bin/atualizar >/dev/null 2>/dev/null
+rm /bin/clearcache >/dev/null 2>/dev/null
+rm /bin/badudp >/dev/null 2>/dev/null
+rm /bin/userbkp >/dev/null 2>/dev/null
+rm /bin/socks.py >/dev/null 2>/dev/null
+rm /bin/setup.sh >/dev/null 2>/dev/null
+rm /bin/att >/dev/null 2>/dev/null
+rm /bin/testeconexao >/dev/null 2>/dev/null
+
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
+
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
 echo -e $vermelhoClaro"Arquivos Removidos!"$fim
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -97,6 +119,8 @@ wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/
 chmod +x /bin/setup.sh
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 chmod +x /bin/att
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/testeconexao -O /bin/testeconexao
+chmod +x /bin/testeconexao
 
 rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
