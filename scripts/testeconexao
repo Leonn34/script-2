@@ -22,8 +22,8 @@ fim="\033[0;37m"
 #############################################
 
 speedtest
-echo ""
-echo -e $verdeClaro"ENTER"$fim $branco"para voltar"$fim
-read -p ""
-sleep 1
+#echo ""
+#echo -e $verdeClaro"ENTER"$fim $branco"para voltar"$fim
+#read -p ""
+#sleep 1
 menu
