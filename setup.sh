@@ -220,6 +220,7 @@ then
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/testeconexao -O /bin/testeconexao
 	chmod +x /bin/testeconexao
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
+	chmod +x /bin/speedtest.py
 	
 	if [ ! -f "/etc/init.d/squid" ]
 	then
