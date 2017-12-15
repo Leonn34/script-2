@@ -1305,7 +1305,7 @@ def shell():
     else:
         callback = print_dots
 
-    printer('Retrieving speedtest.net configuration...', quiet)
+    printer('Recuperando a configuração do speedtest.net', quiet)
     try:
         speedtest = Speedtest()
     except ConfigRetrievalError:
@@ -1336,11 +1336,11 @@ def shell():
     if args.server:
         servers.append(args.server)
 
-    printer('Testing from %(isp)s (%(ip)s)...' % speedtest.config['client'],
+    printer('Testando para: %(isp)s (%(ip)s)...' % speedtest.config['client'],
             quiet)
 
     if not args.mini:
-        printer('Retrieving speedtest.net server list...', quiet)
+        printer('Recuperando a lista de servidores speedtest.net...', quiet)
         try:
             speedtest.get_servers(servers)
         except NoMatchedServers:
@@ -1353,17 +1353,17 @@ def shell():
             print_('%s is an invalid server type, must be int' % args.server)
             sys.exit(1)
 
-        printer('Selecting best server based on ping...', quiet)
+        printer('Selecionando o melhor servidor com base em ping...', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
 
     results = speedtest.results
 
-    printer('Hosted by %(sponsor)s (%(name)s) [%(d)0.2f km]: '
+    printer('Hospedado por: %(sponsor)s (%(name)s) [%(d)0.2f km]: '
             '%(latency)s ms' % results.server, quiet)
 
-    printer('Testing download speed', quiet,
+    printer('Testando a velocidade de download', quiet,
             end=('', '\n')[bool(debug)])
     speedtest.download(callback=callback)
     printer('Download: %0.2f M%s/s' %
@@ -1371,7 +1371,7 @@ def shell():
              args.units[0]),
             quiet)
 
-    printer('Testing upload speed', quiet,
+    printer('Testando a velocidade de upload', quiet,
             end=('', '\n')[bool(debug)])
     speedtest.upload(callback=callback)
     printer('Upload: %0.2f M%s/s' %
