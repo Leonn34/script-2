@@ -26,4 +26,3 @@ speedtest
 #echo -e $verdeClaro"ENTER"$fim $branco"para voltar"$fim
 #read -p ""
 #sleep 1
-menu

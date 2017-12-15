@@ -21,6 +21,12 @@ branco="\033[1;37m"
 fim="\033[0;37m"
 #############################################
 
+arq="/bin/ver"
+arq1="/bin/ver1"
+
+mv $arq1 $arq
+
+#############################################
 clear
 echo ""
 echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
@@ -34,6 +40,7 @@ echo ""
 
 apt-get update >/dev/null 2>/dev/null
 apt-get upgrade -y >/dev/null 2>/dev/null
+
 apt-get install bc >/dev/null 2>/dev/null
 apt-get install python-pip -y >/dev/null 2>/dev/null
 pip install speedtest-cli >/dev/null 2>/dev/null
