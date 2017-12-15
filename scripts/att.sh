@@ -71,6 +71,7 @@ rm /bin/userbkp >/dev/null 2>/dev/null
 rm /bin/socks.py >/dev/null 2>/dev/null
 rm /bin/setup.sh >/dev/null 2>/dev/null
 rm /bin/att >/dev/null 2>/dev/null
+rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
@@ -126,8 +127,9 @@ wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/
 chmod +x /bin/setup.sh
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
 chmod +x /bin/att
-wget https://raw.githubusercontent.com/Leonn34/script-2/master/testeconexao -O /bin/testeconexao
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/testeconexao -O /bin/testeconexao
 chmod +x /bin/testeconexao
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
 
 rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
