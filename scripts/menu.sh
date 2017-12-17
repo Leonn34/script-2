@@ -83,12 +83,11 @@ clear
   echo -e $vermelhoClaro" Seu sistema:"$fim$cyan $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
 if [ "$equal" = "" ]; then
-echo ""
-rm -rf $arq1
+echo -ne ""
 #echo -e $branco" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 echo -e $amarelo" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim
-#mv $arq1 $arq
+#mv -f $arq1 $arq
 fi
 #######FIM DE ATUALIZAÇÃO############################
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
