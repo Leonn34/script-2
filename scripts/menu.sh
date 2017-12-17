@@ -67,6 +67,7 @@ cd /bin
 
 arq="/bin/ver"
 arq1="/bin/ver1"
+equal=$(diff -q $arq $arq1)
 ver=$(cat $arq)
 
 clear
@@ -81,8 +82,9 @@ clear
   sso=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
   echo -e $vermelhoClaro" Seu sistema:"$fim$cyan $sso$fim
 #######VERIFICAÇÃO DE ATUALIZAÇÃO####################
-if diff $arq $arq1 > /dev/null; then
+if [ "$equal" = "" ]; then
 echo ""
+rm -rf $arq1
 #echo -e $branco" NÃO EXISTEM ATUALIZAÇÕES DISPONÍVEIS!"$fim
 else
 echo -e $amarelo" HÁ ATUALIZAÇÕES DISPONÍVEIS!"$fim

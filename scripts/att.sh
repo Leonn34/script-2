@@ -24,7 +24,7 @@ fim="\033[0;37m"
 arq="/bin/ver"
 arq1="/bin/ver1"
 
-mv $arq1 $arq
+mv -f $arq1 $arq
 
 #############################################
 clear
@@ -130,6 +130,7 @@ chmod +x /bin/att
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/testeconexao -O /bin/testeconexao
 chmod +x /bin/testeconexao
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
+chmod +x /bin/speedtest.py
 
 rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
