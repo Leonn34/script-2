@@ -106,6 +106,7 @@ rm /bin/ver >/dev/null 2>/dev/null
 rm /bin/ver1 >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
 rm /bin/speedtest.py >/dev/null 2>/dev/null
+rm /bin/uinstall-script >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -171,6 +172,8 @@ then
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/testeconexao -O /bin/testeconexao
 	chmod +x /bin/testeconexao
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
+	chmod +x /bin/uinstall-script
 	
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -240,7 +243,9 @@ then
 	chmod +x /bin/testeconexao
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
 	chmod +x /bin/speedtest.py
-	
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
+	chmod +x /bin/uinstall-script
+
 	if [ ! -f "/etc/init.d/squid" ]
 	then
 		service squid reload > /dev/null

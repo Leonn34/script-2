@@ -74,6 +74,7 @@ rm /bin/setup.sh >/dev/null 2>/dev/null
 rm /bin/att >/dev/null 2>/dev/null
 rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
+rm /bin/uinstall-script >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -132,6 +133,8 @@ wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/testecone
 chmod +x /bin/testeconexao
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
 chmod +x /bin/speedtest.py
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
+chmod +x /bin/uinstall-script
 
 rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
