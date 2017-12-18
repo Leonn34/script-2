@@ -60,6 +60,7 @@ rm /bin/criarusuario >/dev/null 2>/dev/null
 rm /bin/expcleaner >/dev/null 2>/dev/null
 rm /bin/sshlimiter >/dev/null 2>/dev/null
 rm /bin/addhost >/dev/null 2>/dev/null
+rm /bin/delhost >/dev/null 2>/dev/null
 rm /bin/sshmonitor >/dev/null 2>/dev/null
 rm /bin/ajuda >/dev/null 2>/dev/null
 rm /bin/menu >/dev/null 2>/dev/null

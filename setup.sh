@@ -87,7 +87,26 @@ pip install speedtest-cli >/dev/null 2>/dev/null
 apt-get update >/dev/null 2>/dev/null
 apt-get install -y python3-pip >/dev/null 2>/dev/null
 
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/sshmonitor /bin/ajuda /bin/menu /bin/atualizar /bin/clearcache /bin/badudp /bin/userbkp /bin/socks.py /bin/setup.sh /bin/att /bin/ver /bin/ver1 /bin/testeconexao /bin/speedtest.py >/dev/null 2>/dev/null
+rm /bin/criarusuario >/dev/null 2>/dev/null
+rm /bin/expcleaner >/dev/null 2>/dev/null
+rm /bin/sshlimiter >/dev/null 2>/dev/null
+rm /bin/addhost >/dev/null 2>/dev/null
+rm /bin/delhost >/dev/null 2>/dev/null
+rm /bin/sshmonitor >/dev/null 2>/dev/null
+rm /bin/ajuda >/dev/null 2>/dev/null
+rm /bin/menu >/dev/null 2>/dev/null
+rm /bin/atualizar >/dev/null 2>/dev/null
+rm /bin/clearcache >/dev/null 2>/dev/null
+rm /bin/badudp >/dev/null 2>/dev/null
+rm /bin/userbkp >/dev/null 2>/dev/null
+rm /bin/socks.py >/dev/null 2>/dev/null
+rm /bin/setup.sh >/dev/null 2>/dev/null
+rm /bin/att >/dev/null 2>/dev/null
+rm /bin/ver >/dev/null 2>/dev/null
+rm /bin/ver1 >/dev/null 2>/dev/null
+rm /bin/testeconexao >/dev/null 2>/dev/null
+rm /bin/speedtest.py >/dev/null 2>/dev/null
+
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
 apt-get install squid3 bc screen nano unzip dos2unix wget -y > /dev/null

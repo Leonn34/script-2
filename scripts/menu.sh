@@ -127,13 +127,15 @@ fi
   sleep 0.2
   echo -e $amarelo"[16]"$fim $branco"TESTE DE VELOCIDADE"$fim
   sleep 0.2
-  echo -e $amarelo"[17]"$fim $branco"SAIR"$fim
+  echo -e $amarelo"[17]"$fim $branco"DESINSTALAR SCRIPT"$fim
+  sleep 0.2
+  echo -e $amarelo"[18]"$fim $branco"SAIR"$fim
   sleep 0.2
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
   echo ""
   
-  read -p " DIGITE SUA OPÇÃO: [01-17] " opcao
+  read -p " DIGITE SUA OPÇÃO: [01-18] " opcao
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   
   echo -e $cinzaClaro" OPÇÃO ESCOLHIDA:"$fim $branco$opcao$fim
@@ -269,7 +271,15 @@ fi
       clear
       testeconexao
       ;;
-    17)
+    17)  
+      clear
+      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      #echo -e $amarelo"TESTANDO VELOCIDADE DO SERVIDOR..."$fim
+      sleep 2
+      clear
+      uinstall-script
+      ;;
+    18)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo -e $branco"Saindo..."$fim
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
