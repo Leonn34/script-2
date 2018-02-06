@@ -243,25 +243,7 @@ fi
       ;;
     15)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      tput setaf 7 ; tput bold ; echo " Para iniciar o SOCKS: " ; tput sgr0
-      echo ""
-      tput setaf 6 ; tput bold ; echo " 1° - Entre em /bin," ;
-      sleep 0.3
-      echo " 2° - Abra uma sessão screen," ;
-      sleep 1
-      echo " 3° - Digite screen e aperte ENTER, digite o comando e a porta desejada," ; 
-      sleep 1
-      echo " Ex: python socks.py 80" ;
-      sleep 1
-      echo " 4° - Agora vá em /etc/squid3/squid.conf e comente a porta utilizada no SOCKS." ;
-      sleep 1
-      echo " 5° - Reinicie o Squid: service squid3 restart" ; tput sgr0
-      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo ""
-      echo "ENTER para voltar"
-      read -p ""
-      sleep 1
-      menu
+      socks
       ;;
     16)
       clear
