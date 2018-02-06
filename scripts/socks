@@ -35,7 +35,7 @@ case $opcao in
 	sleep 3
 	cd
 	clear
-	exit
+	menu
 	;;
 	2)
 	clear
@@ -45,7 +45,7 @@ case $opcao in
 	sleep 3
 	cd
 	clear
-	exit
+	menu
 	;;
 	3)
 	clear
@@ -55,7 +55,7 @@ case $opcao in
 	sleep 3
 	cd
 	clear
-	exit
+	menu
 	;;
 	4)
 	clear
@@ -65,7 +65,7 @@ case $opcao in
 	sleep 3
 	cd
 	clear
-	exit
+	menu
 	;;
 	5)
 	clear
@@ -77,5 +77,5 @@ case $opcao in
 	echo "Opção inválida!"
 	sleep 1
 	clear
-	./socks
+	socks
 esac
