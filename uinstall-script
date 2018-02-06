@@ -54,6 +54,7 @@ rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/alterarsenha >/dev/null 2>/dev/null
 rm /bin/alterarlimite >/dev/null 2>/dev/null
 rm /bin/remover >/dev/null 2>/dev/null
+rm /bin/socks >/dev/null 2>/dev/null
 
 ssh="/etc/ssh/sshbak"
 if [ ! -f "$ssh" ]
