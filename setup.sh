@@ -107,6 +107,7 @@ rm /bin/ver1 >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
 rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/uinstall-script >/dev/null 2>/dev/null
+rm /bin/socks >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -163,6 +164,8 @@ then
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/userbkp.sh -O /bin/userbkp
 	chmod +x /bin/userbkp
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks.py -O /bin/socks.py
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks -O /bin/socks
+	chmod +x /bin/socks
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/setup.sh
 	chmod +x /bin/setup.sh
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
@@ -233,6 +236,8 @@ then
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/userbkp.sh -O /bin/userbkp
 	chmod +x /bin/userbkp
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks.py -O /bin/socks.py
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks -O /bin/socks
+	chmod +x /bin/socks
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/setup.sh
 	chmod +x /bin/setup.sh
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
@@ -259,7 +264,7 @@ then
 		/etc/init.d/ssh reload > /dev/null
 	fi
 fi
-rm /bin/setup_script_sousatips.sh
+rm /bin/setup.sh
 clear
 echo ""
 echo -e $verd"Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8799"$fim
