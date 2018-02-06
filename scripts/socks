@@ -73,6 +73,7 @@ case $opcao in
 	sleep 3
 	clear
 	exit
+	menu
 	;;
 	*)
 	echo "Opção inválida!"
