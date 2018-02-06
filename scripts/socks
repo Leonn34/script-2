@@ -71,8 +71,6 @@ case $opcao in
 	clear
 	echo "SAINDO..."
 	sleep 3
-	clear
-	exit
 	menu
 	;;
 	*)
