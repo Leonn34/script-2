@@ -75,6 +75,7 @@ rm /bin/att >/dev/null 2>/dev/null
 rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
 rm /bin/uinstall-script >/dev/null 2>/dev/null
+rm /bin/socks >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -125,6 +126,8 @@ chmod +x /bin/badudp
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/userbkp.sh -O /bin/userbkp
 chmod +x /bin/userbkp
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks.py -O /bin/socks.py
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/socks -O /bin/socks
+chmod +x /bin/socks
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh -O /bin/setup.sh
 chmod +x /bin/setup.sh
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/att.sh -O /bin/att
