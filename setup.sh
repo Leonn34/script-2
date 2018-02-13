@@ -108,6 +108,7 @@ rm /bin/testeconexao >/dev/null 2>/dev/null
 rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/uinstall-script >/dev/null 2>/dev/null
 rm /bin/socks >/dev/null 2>/dev/null
+rm /bin/limiteconexao >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -177,6 +178,8 @@ then
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest.py -O /bin/speedtest.py
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
 	chmod +x /bin/uinstall-script
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/limiteconexao -O /bin/limiteconexao
+	chmod +x /bin/limiteconexao
 	
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -250,6 +253,8 @@ then
 	chmod +x /bin/speedtest.py
 	wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
 	chmod +x /bin/uinstall-script
+	wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/limiteconexao -O /bin/limiteconexao
+	chmod +x /bin/limiteconexao
 
 	if [ ! -f "/etc/init.d/squid" ]
 	then
