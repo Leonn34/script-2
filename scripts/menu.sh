@@ -184,24 +184,7 @@ fi
     10)
       clear
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo -e $amarelo"PARA ATIVAR O LIMITE DE CONEXÔES:"$fim
-      sleep 2
-      echo ""
-      echo -e $branco"ABRA UMA SESSÃO"$fim $verdeClaro"SCREEN,"$fim $branco"DIGITE:"$fim $verdeClaro"screen"$fim $branco"E APERTE"$fim $verdeClaro"ENTER."$fim
-      sleep 2
-      echo -e $branco"DIGITE:"$fim $verdeClaro"sshlimiter"$fim
-      sleep 2
-      echo -e $branco"PARA SAIR E DEIXAR RODANDO, DIGITE:"$fim $verdeClaro"CTRL+A+D"$fim
-      sleep 2
-      echo ""
-      echo -e $amarelo"OBS. REPITA ESSES PROCESSOS A CADA VEZ QUE REINICIAR A VPS!"$fim
-      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      sleep 2
-      echo ""
-      echo -e $verdeClaro"ENTER"$fim $branco"para voltar"$fim
-      read -p ""
-      sleep 1
-      menu
+      limitarconexao
       ;;
     11)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
