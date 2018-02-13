@@ -76,6 +76,7 @@ rm /bin/speedtest.py >/dev/null 2>/dev/null
 rm /bin/testeconexao >/dev/null 2>/dev/null
 rm /bin/uinstall-script >/dev/null 2>/dev/null
 rm /bin/socks >/dev/null 2>/dev/null
+rm /bin/limiteconexao >/dev/null 2>/dev/null
 
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh >/dev/null 2>/dev/null
 
@@ -138,6 +139,8 @@ wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/speedtest
 chmod +x /bin/speedtest.py
 wget https://raw.githubusercontent.com/Leonn34/script-2/master/uinstall-script -O /bin/uinstall-script
 chmod +x /bin/uinstall-script
+wget https://raw.githubusercontent.com/Leonn34/script-2/master/scripts/limiteconexao -O /bin/limiteconexao
+chmod +x /bin/limiteconexao
 
 rm /bin/setup.sh >/dev/null 2>/dev/null
 clear
