@@ -242,8 +242,9 @@ fi
       	echo -e $branco"[1]"$fim $verdeClaro"SIM"$fim
       	echo -e $branco"[2]"$fim $vermelhoClaro"NÃO"$fim
 	echo ""
-      	read -p "[1-2]" opcao
-      	echo -e $branco"SUA OPÇÃO: "$fim echo -e $amarelo$opcao$fim
+      	read -p "[1-2] " opcao
+      	echo "SUA OPÇÃO: " $opcao
+	echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
         case $opcao in
           1)
             socks
