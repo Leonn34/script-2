@@ -231,7 +231,7 @@ fi
       	echo -e $amarelo"Comente a porta a ser utilizada no squid.conf"$fim
       	echo -e $branco"Ex.: nano /etc/squid3/squid.conf"$fim
       	echo ""
-	echo -e $verdeClaro"#http_port 80"$fim
+	echo -e $vermelhoClaro"#"$fim$verdeClaro"http_port 80"$fim
       	echo -e $verdeClaro"http_port 3128"$fim
       	echo -e $verdeClaro"http_port 8080"$fim
       	echo -e $verdeClaro"http_port 8799"$fim
@@ -243,8 +243,9 @@ fi
       	echo -e $branco"[2]"$fim $vermelhoClaro"NÃO"$fim
 	echo ""
       	read -p "[1-2] " opcao
-      	echo "SUA OPÇÃO: " $opcao
 	echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      	echo -e $cinzaClaro" OPÇÃO ESCOLHIDA:"$fim $branco$opcao$fim
+	
         case $opcao in
           1)
             socks
