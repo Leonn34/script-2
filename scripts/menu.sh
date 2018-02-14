@@ -234,12 +234,13 @@ fi
       	echo "http_port 3128"
       	echo "http_port 8080"
       	echo "http_port 8799"
+	echo ""
       	echo "Depois reinicie: service squid3 restart"
-      
+	echo ""
       	echo "Deseja continuar?"
       	echo "[1]" "SIM"
       	echo "[2]" "NÃO"
-      
+	echo ""
       	read -p "[1-2]" opcao
       	echo "SUA OPÇÃO: " $opcao
         case $opcao in
