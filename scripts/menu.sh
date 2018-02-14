@@ -225,22 +225,23 @@ fi
       menu
       ;;
     15)
-      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
-      echo "Para que o SOCKS funcione corretamente,"
-      echo "Comente a porta a ser utilizada no squid.conf"
-      echo "Ex.: nano /etc/squid3/squid.conf"
-      echo "#http_port 80"
-      echo "http_port 3128"
-      echo "http_port 8080"
-      echo "http_port 8799"
-      echo "Depois reinicie: service squid3 restart"
+    	clear
+	echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      	echo "Para que o SOCKS funcione corretamente,"
+      	echo "Comente a porta a ser utilizada no squid.conf"
+      	echo "Ex.: nano /etc/squid3/squid.conf"
+      	echo "#http_port 80"
+      	echo "http_port 3128"
+      	echo "http_port 8080"
+      	echo "http_port 8799"
+      	echo "Depois reinicie: service squid3 restart"
       
-      echo "Deseja continuar?"
-      echo "[1]" "SIM"
-      echo "[2]" "NÃO"
+      	echo "Deseja continuar?"
+      	echo "[1]" "SIM"
+      	echo "[2]" "NÃO"
       
-      read -p "[1-2]" opcao
-      echo "SUA OPÇÃO: " $opcao
+      	read -p "[1-2]" opcao
+      	echo "SUA OPÇÃO: " $opcao
         case $opcao in
           1)
             socks
