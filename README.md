@@ -1,5 +1,5 @@
 # script-2
-script para testar antes do oficial
+script Official
 
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh
 
