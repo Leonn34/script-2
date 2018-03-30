@@ -123,13 +123,17 @@ fi
   sleep 0.2
   echo -e $amarelo"[14]"$fim $branco"BADUDP"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[15]"$fim $branco"INICIAR SOCKS"$fim $vermelhoClaro"[screen]"$fim
+  echo -e $amarelo"[15]"$fim $branco"ATIVAR STUNNEL4"$fim $vermelhoClaro"[SSL]"$fim
   sleep 0.2
-  echo -e $amarelo"[16]"$fim $branco"TESTE DE VELOCIDADE"$fim
+  echo -e $amarelo"[16]"$fim $branco"DESATIVAR STUNNEL4"$fim $vermelhoClaro"[SSL]"$fim
   sleep 0.2
-  echo -e $amarelo"[17]"$fim $branco"DESINSTALAR SCRIPT"$fim
+  echo -e $amarelo"[17]"$fim $branco"INICIAR SOCKS"$fim $vermelhoClaro"[screen]"$fim
   sleep 0.2
-  echo -e $amarelo"[18]"$fim $branco"SAIR"$fim
+  echo -e $amarelo"[18]"$fim $branco"TESTE DE VELOCIDADE"$fim
+  sleep 0.2
+  echo -e $amarelo"[19]"$fim $branco"DESINSTALAR SCRIPT"$fim
+  sleep 0.2
+  echo -e $amarelo"[20]"$fim $branco"SAIR"$fim
   sleep 0.2
   echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
   sleep 0.2
@@ -225,6 +229,14 @@ fi
       menu
       ;;
     15)
+      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      ativarstunnel
+      ;;
+    16)
+      echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
+      desativarstunnel
+      ;;
+    17)
     	clear
 	echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       	echo -e $amarelo"Para que o SOCKS funcione corretamente,"$fim
@@ -261,7 +273,7 @@ fi
             menu
         esac
       ;;
-    16)
+    18)
       clear
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo -e $amarelo"TESTANDO VELOCIDADE DO SERVIDOR..."$fim
@@ -269,7 +281,7 @@ fi
       clear
       testeconexao
       ;;
-    17)  
+    19)  
       clear
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       #echo -e $amarelo"TESTANDO VELOCIDADE DO SERVIDOR..."$fim
@@ -277,7 +289,7 @@ fi
       clear
       uinstall-script
       ;;
-    18)
+    20)
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
       echo -e $branco"Saindo..."$fim
       echo -e $verdeClaro"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="$fim
