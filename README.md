@@ -1,5 +1,5 @@
 # script-2
-script Official
+script Desatualizado
 
 wget -c -P /bin https://raw.githubusercontent.com/Leonn34/script-2/master/setup.sh
 
